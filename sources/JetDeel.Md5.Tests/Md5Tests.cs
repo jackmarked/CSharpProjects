@@ -91,7 +91,7 @@ sealed class Md5Tests
             h1.Write(writer);
         var arrayFromStram = memoryStream.ToArray();
         memoryStream = new MemoryStream(arrayFromStram);
-        Md5Hash h2 = new Md5Hash();
+        var h2 = new Md5Hash();
         using (var reader = new BinaryReader(memoryStream))
             h2 = Md5Hash.Read(reader);
         Assert.That(h1.A, Is.EqualTo(h2.A));
@@ -159,7 +159,7 @@ sealed class Md5Tests
         hashAsObject = hash2;
         Assert.That(hash1.Equals(hashAsObject));
         hashAsObject = hash3;
-        Assert.That(!hash1.Equals(hashAsObject));
+        Assert.That(hash1, Is.Not.EqualTo(hashAsObject));
     }
     [Test]
     public void Rfc1321Samples()
@@ -197,7 +197,7 @@ sealed class Md5Tests
     public void Md5ToByteArrayTest()
     {
         // Arrange.
-        var md5 = Md5Hash.Calculate(new byte[0]);
+        var md5 = Md5Hash.Calculate(Array.Empty<byte>());
         string actual = md5.ToString();
         Assert.That(actual, Is.EqualTo("d41d8cd98f00b204e9800998ecf8427e"));
 

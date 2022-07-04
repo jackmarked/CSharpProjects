@@ -1,13 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\JetDevel.Collections\JetDevel.Collections.csproj" />
-    <ProjectReference Include="..\JetDevel.TestUtilities\JetDevel.TestUtilities.csproj" />
-  </ItemGroup>
-
+    <Import Project="..\CommonTest.targets" />
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+    </PropertyGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\JetDevel.Collections\JetDevel.Collections.csproj" />
+        <ProjectReference Include="..\JetDevel.TestUtilities\JetDevel.TestUtilities.csproj" />
+    </ItemGroup>
 </Project>
