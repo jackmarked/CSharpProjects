@@ -1,0 +1,16 @@
+﻿<Project>
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <SignAssembly>true</SignAssembly>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <Nullable>disable</Nullable>
+        <AssemblyOriginatorKeyFile>..\Integro.snk</AssemblyOriginatorKeyFile>
+        <IsPackable>false</IsPackable>
+        <Optimize>False</Optimize>
+    </PropertyGroup>
+    <ItemGroup>
+        <Compile Include="..\GlobalAssemblyInformation.cs" />
+        <Compile Include="..\GlobalAssemblyInformationTests.cs" />
+    </ItemGroup>
+</Project>
